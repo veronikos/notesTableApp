@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #e9dcb0, #99d2ec);
+  color: #0a445e;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1rem;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-container {
+  margin: 0 1rem 1rem 1rem;
+  border: 1px solid #0a445e;
+}
+
+.table-header {
+  min-width: 80vw;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #0a445e;
+}
+
+.table-header div {
+  min-width: 12rem;
+  padding: 0.3rem;
+}
+
+.table-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.table-buttons button {
+  margin-right: 1rem;
+}
+
+i {
+  color: rgb(255, 255, 255);
+  border: none;
+  margin: 0.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+  width: 4rem;
+  text-align: center;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover i {
+  color: #0a445e;
+}
+
+.table-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  background: white;
+  margin: 0.5rem;
+}
+
+.created,
+.category,
+.dates {
+  width: 10rem;
+}
+
+.name,
+.content {
+  width: 20rem;
+}
+
+.table-content div {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.table-content i {
+  color: #99d2ec;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+}
+
+.name i {
+  color: white;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 1rem 1rem;
+  margin: 1rem;
+  background-color: #99d2ec;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
