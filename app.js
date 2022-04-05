@@ -56,6 +56,7 @@ const startData = [
 // Selectors
 const tableHeader = document.querySelector(".table-container");
 const tableButtons = document.querySelector(".table-container");
+const headerButton = document.querySelector(".header-button");
 
 // Functions
 
@@ -80,7 +81,7 @@ const categoryIcon = (category) => {
 };
 
 // SHOW DATA FROM START
-const showStartData = () => {
+const showStartData = (startData) => {
   startData.forEach((data) => {
     const tableRow = document.createElement("div");
     tableRow.classList.add("table-row");
@@ -141,6 +142,11 @@ const deleteNote = (e) => {
   }
 };
 
+const addNewNote = () => {
+  let newName = prompt("Name?");
+};
+
 // EVENT LISTENERS
-document.addEventListener("DOMContentLoaded", showStartData);
+document.addEventListener("DOMContentLoaded", showStartData(startData));
 tableButtons.addEventListener("click", deleteNote);
+headerButton.addEventListener("click", addNewNote);
