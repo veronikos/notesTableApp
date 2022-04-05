@@ -15,8 +15,18 @@ header {
   font-size: 1rem;
   min-height: 10vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+.header-button {
+  padding: 1rem;
+  background-color: #0a445e;
+  margin-right: 1rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+  width: 12rem;
 }
 
 .table-container {

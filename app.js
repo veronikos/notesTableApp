@@ -55,6 +55,7 @@ const startData = [
 
 // Selectors
 const tableHeader = document.querySelector(".table-container");
+const tableButtons = document.querySelector(".table-container");
 
 // Functions
 
@@ -127,15 +128,15 @@ const showStartData = () => {
   });
 };
 
-const tableButtons = document.querySelector(".table-container");
-
 const deleteNote = (e) => {
   e.preventDefault();
   let item = e.target;
   console.log("hey, we delele it", e.target.classList);
-  if (item.classList[1] === "fa-trash") {
-    const tableRow = item.parentElement.parentElement.parentElement;
-    console.log(tableRow);
+  const tableRow = item.parentElement.parentElement.parentElement;
+  if (
+    item.classList[1] === "fa-trash" &&
+    tableRow.classList[0] === "table-row"
+  ) {
     tableRow.remove();
   }
 };
