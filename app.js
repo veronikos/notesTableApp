@@ -81,34 +81,33 @@ const categoryIcon = (category) => {
 // SHOW DATA FROM START
 const showStartData = () => {
   startData.forEach((data) => {
-    const tableContent = document.createElement("div");
-    tableContent.classList.add("table-content");
-
+    const tableRow = document.createElement("div");
+    tableRow.classList.add("table-row");
     const name = document.createElement("div");
     name.classList.add("name");
     name.innerHTML = `${categoryIcon(data.category)}
     <b>${data.name}</b>`;
-    tableContent.appendChild(name);
+    tableRow.appendChild(name);
 
     const created = document.createElement("div");
     created.classList.add("created");
     created.innerText = `${data.created}`;
-    tableContent.appendChild(created);
+    tableRow.appendChild(created);
 
     const category = document.createElement("div");
     category.classList.add("category");
     category.innerText = `${data.category}`;
-    tableContent.appendChild(category);
+    tableRow.appendChild(category);
 
     const content = document.createElement("div");
     content.classList.add("content");
     content.innerText = `${data.content}`;
-    tableContent.appendChild(content);
+    tableRow.appendChild(content);
 
     const dates = document.createElement("div");
     dates.classList.add("dates");
     dates.innerText = `${data.dates}`;
-    tableContent.appendChild(dates);
+    tableRow.appendChild(dates);
 
     const tableButtons = document.createElement("div");
     tableButtons.classList.add("table-buttons");
@@ -122,9 +121,9 @@ const showStartData = () => {
     <button>
         <i class="fas fa-trash"></i>
     </button>`;
-    tableContent.appendChild(tableButtons);
+    tableRow.appendChild(tableButtons);
 
-    tableHeader.appendChild(tableContent);
+    tableHeader.appendChild(tableRow);
   });
 };
 

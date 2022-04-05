@@ -70,7 +70,7 @@ button:hover i {
   color: #0a445e;
 }
 
-.table-content {
+.table-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,13 +90,13 @@ button:hover i {
   width: 20rem;
 }
 
-.table-content div {
+.table-row div {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.table-content i {
+.table-row i {
   color: #99d2ec;
 }
 
