@@ -43,6 +43,8 @@ header {
   align-items: center;
   justify-content: space-between;
   border: 1px solid #0a445e;
+  background-color: #0a445e;
+  color: white;
 }
 
 .table-header div {
@@ -125,11 +127,6 @@ button:hover i {
   background-color: #99d2ec;
 }
 
-.fall {
-  transform: translateY(8rem) rotateZ(20deg);
-  opacity: 0;
-}
-
 .input-area {
   display: none;
   position: absolute;
@@ -142,15 +139,34 @@ button:hover i {
 }
 
 .input-area input,
-.input-area textarea {
+.input-area textarea,
+select {
+  color: #0a445e;
   width: 50vw;
   border: none;
   font-size: 1.5rem;
   padding: 1rem;
 }
 
+.fa-square-xmark {
+  color: rgb(175, 73, 22);
+}
+
+.select {
+  padding: 0.6rem;
+  width: 50vw;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #0a445e;
+}
+
+select {
+  width: 20rem;
+}
+
 .input-area input:focus,
-.input-area textarea:focus {
+.input-area textarea:focus,
+select:focus {
   outline: none;
 }
 

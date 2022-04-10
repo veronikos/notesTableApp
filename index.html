@@ -36,6 +36,14 @@
           </button>
         </div>
         <input type="text" placeholder="Name me..." />
+        <div class="select">
+          <select name="category" class="choose-category">
+            <option value="Task">Task</option>
+            <option value="Random Thought">Random Thought</option>
+            <option value="Idea">Idea</option>
+            <option value="Quote">Quote</option>
+          </select>
+        </div>
         <textarea
           placeholder="What do you think of?..."
           name="Name"
@@ -44,7 +52,9 @@
           rows="10"
         ></textarea>
         <div class="button-align">
-          <button class="text-button" type="submit">Save!</button>
+          <button class="text-button save-note-button" type="submit">
+            Save!
+          </button>
         </div>
       </div>
       <div class="table-container">
@@ -63,48 +73,6 @@
             </button>
           </div>
         </div>
-        <!-- <div class="table-content">
-          <div class="name">
-            <i class="fas fa-box-archive"></i>
-            <b>Shopping List</b>
-          </div>
-          <div class="created">April 20, 2021</div>
-          <div class="category">Task</div>
-          <div class="content"><p>Tomatoes, bread</p></div>
-          <div class="dates"></div>
-          <div class="table-buttons">
-            <button>
-              <i class="fa-solid fa-pen"></i>
-            </button>
-            <button>
-              <i class="fas fa-box-archive"></i>
-            </button>
-            <button>
-              <i class="fas fa-trash"></i>
-            </button>
-          </div>
-        </div>
-        <div class="table-content">
-          <div class="name">
-            <i class="fas fa-box-archive"></i>
-            <b>Shopping List</b>
-          </div>
-          <div class="created">April 20, 2021</div>
-          <div class="category">Task</div>
-          <div class="content"><p>Tomatoes, bread</p></div>
-          <div class="dates">3/5/2022</div>
-          <div class="table-buttons">
-            <button>
-              <i class="fa-solid fa-pen"></i>
-            </button>
-            <button>
-              <i class="fas fa-box-archive"></i>
-            </button>
-            <button>
-              <i class="fas fa-trash"></i>
-            </button>
-          </div>
-        </div> -->
       </div>
     </main>
     <script src="./app.js"></script>
