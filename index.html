@@ -24,9 +24,29 @@
     <header>
       <div></div>
       <h1>This is my Notes table</h1>
-      <button class="header-button" type="submit">Create Note</button>
+      <button class="text-button header-button" type="submit">
+        Create Note
+      </button>
     </header>
     <main>
+      <div class="input-area">
+        <div class="button-align">
+          <button>
+            <i class="fa-solid fa-square-xmark"></i>
+          </button>
+        </div>
+        <input type="text" placeholder="Name me..." />
+        <textarea
+          placeholder="What do you think of?..."
+          name="Name"
+          id=""
+          cols="20"
+          rows="10"
+        ></textarea>
+        <div class="button-align">
+          <button class="text-button" type="submit">Save!</button>
+        </div>
+      </div>
       <div class="table-container">
         <div class="table-header">
           <div class="name">Name</div>

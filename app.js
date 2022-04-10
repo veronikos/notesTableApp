@@ -57,6 +57,7 @@ const startData = [
 const tableHeader = document.querySelector(".table-container");
 const tableButtons = document.querySelector(".table-container");
 const headerButton = document.querySelector(".header-button");
+const closePopupButton = document.querySelector(".fa-square-xmark");
 
 // Functions
 
@@ -89,27 +90,22 @@ const showStartData = (startData) => {
     name.classList.add("name");
     name.innerHTML = `${categoryIcon(data.category)}
     <b>${data.name}</b>`;
-    tableRow.appendChild(name);
 
     const created = document.createElement("div");
     created.classList.add("created");
     created.innerText = `${data.created}`;
-    tableRow.appendChild(created);
 
     const category = document.createElement("div");
     category.classList.add("category");
     category.innerText = `${data.category}`;
-    tableRow.appendChild(category);
 
     const content = document.createElement("div");
     content.classList.add("content");
     content.innerText = `${data.content}`;
-    tableRow.appendChild(content);
 
     const dates = document.createElement("div");
     dates.classList.add("dates");
     dates.innerText = `${data.dates}`;
-    tableRow.appendChild(dates);
 
     const tableButtons = document.createElement("div");
     tableButtons.classList.add("table-buttons");
@@ -123,8 +119,8 @@ const showStartData = (startData) => {
     <button>
         <i class="fas fa-trash"></i>
     </button>`;
-    tableRow.appendChild(tableButtons);
 
+    tableRow.append(name, created, category, content, dates, tableButtons);
     tableHeader.appendChild(tableRow);
   });
 };
@@ -133,7 +129,7 @@ const deleteNote = (e) => {
   e.preventDefault();
   let item = e.target;
   console.log("hey, we delele it", e.target.classList);
-  const tableRow = item.parentElement.parentElement.parentElement;
+  const tableRow = item.closest(".table-row");
   if (
     item.classList[1] === "fa-trash" &&
     tableRow.classList[0] === "table-row"
@@ -142,11 +138,20 @@ const deleteNote = (e) => {
   }
 };
 
+const inputArea = document.querySelector(".input-area");
+
 const addNewNote = () => {
-  let newName = prompt("Name?");
+  // let newName = prompt("Name?");
+
+  inputArea.style.display = "flex";
+};
+
+const closePopup = () => {
+  inputArea.style.display = "none";
 };
 
 // EVENT LISTENERS
 document.addEventListener("DOMContentLoaded", showStartData(startData));
 tableButtons.addEventListener("click", deleteNote);
 headerButton.addEventListener("click", addNewNote);
+closePopupButton.addEventListener("click", closePopup);
